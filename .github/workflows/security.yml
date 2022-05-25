@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - 'src/**'
+  push:
+    paths:
+      - 'src/**'
+      - '!src/**/*.md'
+    branches:
+      - main
 
 jobs:
   analyze:
