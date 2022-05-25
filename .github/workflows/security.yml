@@ -46,7 +46,7 @@ jobs:
           cache: "poetry"
 
       - name: Install dependencies
-        run: poetry install
+        run: poetry env use "3.9" && poetry install
         working-directory: ${{ env.SRC_DIR }}
 
       - name: Initialize CodeQL
