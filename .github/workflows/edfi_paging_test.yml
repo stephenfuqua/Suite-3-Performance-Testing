@@ -40,7 +40,7 @@ jobs:
 
       - name: Run CI Test Task
         run: |
-          poetry env use "3.9"
+          cd ${{ env.SRC_DIR }} && poetry env use "3.9"
           python ./eng/build.py ci:test ${{ env.PACKAGE_NAME }}
 
       - name: Test Report
